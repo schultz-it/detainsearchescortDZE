@@ -1,14 +1,15 @@
 player removeAction act4;
 player forceWalk false;
-_newCiv = cursorTarget;
+player getVariable ["Detainee", false];
 _dist = player distance _newCiv;
 _newCiv setVariable ["Detain",0,true];
+player setVariable ["Detainee", nil, true];
 sleep 1;
-_pos=getposATL player;
-{if(_x distance _pos < 5)then{detach _x};}forEach allunits;
+
+detach _newCiv;
 player playActionNow "Medic";
 _newCiv setVariable ["Detain",1,true];
 PVDZ_ply_Arrst = _newCiv;
 publicVariable "PVDZ_ply_Arrst";
-[objNull, _newCiv, rswitchmove ,"ActsPsitMstpSnonWunaDnon_sceneNikitinDisloyalty_Sykes"] call RE;
+_newCiv switchMove "ActsPsitMstpSnonWunaDnon_sceneNikitinDisloyalty_Sykes";
 [objNull, _newCiv, rDisableuserinput,true] call RE;
