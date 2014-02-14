@@ -1,9 +1,10 @@
-_newCiv = cursorTarget;
+_newCiv = player getVariable ["Detainee", false];
  
 player playActionNow "Medic";
 sleep 15;
 player forceWalk False;
-[objNull, _newCiv, rSwitchMove,""] call RE;
+_newCiv rSwitchMove,"";
 _newCiv setVariable ["Detain",0,true];
 PVDZ_ply_Arrst = _newCiv;
 publicVariable "PVDZ_ply_Arrst";
+player setVariable ["Detainee", nil, true];
