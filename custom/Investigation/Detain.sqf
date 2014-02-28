@@ -1,12 +1,12 @@
 _newCiv = cursorTarget;
+Detainee = _newCiv;
 _dist = player distance _newCiv;
 _newCiv setVariable ["Detain",0,true];
 player removeMagazine "PartGeneric";
-player setVariable ["Detainee", _newCiv, true];
 sleep 1;
 player playActionNow "Medic";
 _newCiv setVariable ["Detain",1,true];
 PVDZ_ply_Arrst = _newCiv;
 publicVariable "PVDZ_ply_Arrst";
-_newCiv switchMove"ActsPsitMstpSnonWunaDnon_sceneNikitinDisloyalty_Sykes";
+_newCiv switchMove "ActsPsitMstpSnonWunaDnon_sceneNikitinDisloyalty_Sykes";
 [objNull, _newCiv, rDisableuserinput,true] call RE;

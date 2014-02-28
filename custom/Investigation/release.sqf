@@ -1,4 +1,4 @@
-_newCiv = player getVariable ["Detainee", false];
+_newCiv = Detainee;
  
 player playActionNow "Medic";
 sleep 15;
@@ -7,4 +7,4 @@ _newCiv rSwitchMove,"";
 _newCiv setVariable ["Detain",0,true];
 PVDZ_ply_Arrst = _newCiv;
 publicVariable "PVDZ_ply_Arrst";
-player setVariable ["Detainee", nil, true];
+Detainee = nil;

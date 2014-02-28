@@ -1,2 +1,1 @@
-player getVariable ["Detainee", false];
-player action ["Gear", _newCiv];
+player action ["Gear", Detainee];
