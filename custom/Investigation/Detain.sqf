@@ -8,5 +8,5 @@ player playActionNow "Medic";
 _newCiv setVariable ["Detain",1,true];
 PVDZ_ply_Arrst = _newCiv;
 publicVariable "PVDZ_ply_Arrst";
-_newCiv switchMove "ActsPsitMstpSnonWunaDnon_sceneNikitinDisloyalty_Sykes";
+[objNull, _newCiv, rswitchmove ,"ActsPsitMstpSnonWunaDnon_sceneNikitinDisloyalty_Sykes"] call RE;
 [objNull, _newCiv, rDisableuserinput,true] call RE;

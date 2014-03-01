@@ -10,8 +10,7 @@ if (isNil "Detainee") then {
 	 
 	_isMan = _cursorTarget isKindOf "Man";
 	_isAlive = alive _cursorTarget;
-	 
-	_newCiv switchMove "ActsPercMstpSnonWrflDnon_interrogate02_forgoten";
+	[objNull, _newCiv, rswitchmove ,"ActsPercMstpSnonWrflDnon_interrogate02_forgoten"] call RE;
 	[objNull, _newCiv, rDisableuserinput,true] call RE;
 	player forceWalk True;
 	[objNull, _newCiv, rforceWalk,true] call RE;
